@@ -1,0 +1,14 @@
+// Сброс стандартных стилей
+@import "reset";
+
+// Импорт шрифтов
+@import "typography";
+
+// Импорт переменных SCSS
+@import "vars";
+
+// Импорт общих стилей
+@import "general";
+
+// Импорт стилей компонентов
+@import "components";

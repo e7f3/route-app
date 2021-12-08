@@ -1,0 +1,30 @@
+// Переменные SCSS
+
+// Цвета
+
+$background-color--dark: #010912;
+$main-color--light: #fafcfe;
+$background-color--bluegray: rgba(30, 41, 59, 0.5);
+
+// Градиенты
+
+$main-gradient: linear-gradient(180deg,rgba(0,0,0,.3),transparent 50%),linear-gradient(112deg,#a74da3,#6f40aa 50%,#486bb8);
+
+// Настройки шрифта
+
+$main-font-family: "Roboto";
+
+$title-font--h1: 800 58px/60px $main-font-family;
+$title-font--h1-small: 800 40px/50px $main-font-family;
+$title-font--h2: 700 40px/57px $main-font-family;
+$title-font--h2-small: 600 30px/45px $main-font-family;
+$title-font--h3: 700 24px/32px $main-font-family;
+$title-font--h4: 500 20px/30px $main-font-family;
+$title-font--h5: 700 16px/24px $main-font-family;
+$title-font--h6: 600 14px/24px $main-font-family;
+$main-font: 400 20px/30px $main-font-family;
+
+// Letter spacing
+
+$letter-spacing--m: 0.2px;
+$letter-spacing--s: 0.1px;

@@ -1,5 +1,7 @@
 import axios from "axios";
 
+// Api для запроса к Google Geocode Api для получения адреса из координат точки
+
 export default async function handler(req, res) {
   const { lat, lng } = req.body;
   const params = {

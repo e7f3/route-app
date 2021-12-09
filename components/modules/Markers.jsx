@@ -1,29 +1,32 @@
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getAddressFromCoordsAction,
-  removePlaceAction,
-  updatePlaceAction,
-} from "../../store/placesReducer";
+import { getAddressFromCoordsAction } from "../../store/placesReducer";
 import { Marker } from "@react-google-maps/api";
+
+// Компонент маркеров
 
 export default function Markers({ setSelected }) {
   const dispatch = useDispatch();
+
+  // Получение состояния из store
   const placeIds = useSelector((state) => state.placesReducer.placeIds);
   const places = useSelector((state) => state.placesReducer.places);
 
+  // При перетаскивании маркера
   const onDragEnd = (event, placeId) => {
+    // Обновление координат точки
     const newPlace = {
       id: placeId,
       lat: event.latLng.lat(),
       lng: event.latLng.lng(),
     };
+    // Запрос на декодирование координат точки в адрес
+    // и добавление этой информации в объект точки
     dispatch(getAddressFromCoordsAction(newPlace));
   };
 
+  // При клике на маркер изменить состояние
   const onClick = (placeId) => {
     setSelected(places[placeId]);
-    console.log(places[placeId])
-    //dispatch(removePlaceAction(placeId));
   };
 
   return (

@@ -2,6 +2,8 @@ import { call, put, takeEvery } from "redux-saga/effects";
 import { GET_ADDRESS_FROM_COORDS, updatePlaceAction } from "../store/placesReducer";
 import axios from "axios";
 
+// Saga для запросов к api для получения адреса из координат точки
+
 const fetchAddress = (params) =>
   axios
     .post("/api/map/decodeCoords", { lat: params.lat, lng: params.lng })
@@ -9,6 +11,9 @@ const fetchAddress = (params) =>
 
 function* getPlaceAddress(action) {
   const res = yield call(fetchAddress, action.payload);
+
+  // Обновить данные о точке
+  
   yield put(
     updatePlaceAction({
       ...action.payload,

@@ -1,5 +1,7 @@
 import { InfoWindow } from "@react-google-maps/api";
 
+// Компонент для окошек, открывающихся при клике на маркер на карте
+
 export default function MarkerInfo({ selected, setSelected, className }) {
   return (
     <InfoWindow

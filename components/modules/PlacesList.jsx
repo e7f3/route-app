@@ -2,12 +2,15 @@ import { Droppable, resetServerContext } from "react-beautiful-dnd";
 import { useSelector } from "react-redux";
 import PlaceCard from "./PlaceCard.jsx";
 
+// Компонент - список точек с возможностью перетаскивания и изменения порядка точек в списке
+
 export default function PlacesList() {
+  // Получение состояния из store
   const placeIds = useSelector((state) => state.placesReducer.placeIds);
 
   return (
     <Droppable droppableId="places">
-      {(provided, snapshot) => (
+      {(provided) => (
         <ul
           className="places__list"
           ref={provided.innerRef}

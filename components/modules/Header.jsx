@@ -1,5 +1,7 @@
 import Logo from "../elements/Logo.jsx";
 
+// Компонент - header страницы
+
 export default function Header() {
   return (
     <header className="header">

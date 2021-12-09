@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
+// Кастомный Document, добавляет имена классов компонентам html и body
+
 class MyDocument extends Document {
   render() {
     return (

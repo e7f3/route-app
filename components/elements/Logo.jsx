@@ -1,6 +1,8 @@
 import { Typography } from "@mui/material";
 import Image from "next/image";
 
+// Логотип
+
 export default function Logo({ ...props }) {
   return (
     <div {...props}>

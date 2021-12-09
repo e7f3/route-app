@@ -4,6 +4,8 @@ import PedalBikeIcon from "@mui/icons-material/PedalBike";
 import DirectionsWalkIcon from "@mui/icons-material/DirectionsWalk";
 import DirectionsTransitIcon from "@mui/icons-material/DirectionsTransit";
 
+// Компонент - переключатель режимов построения маршрута
+
 export default function TravelMode({ travelMode, setTravelMode }) {
   const handleChange = (event, newTravelMode) => {
     setTravelMode(newTravelMode);

@@ -3,6 +3,8 @@ import { removePlaceAction } from "../../store/placesReducer";
 import { Link } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
 
+// Компонент кнопки удаления точки из списка точек
+
 export default function RemovePlaceButton({ placeId }) {
   const dispatch = useDispatch();
   const onClick = () => {

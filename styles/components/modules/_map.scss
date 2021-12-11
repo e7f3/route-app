@@ -16,10 +16,16 @@
 }
 
 .map__marker-info {
-  color: $background-color--dark
+  color: $background-color--dark;
 }
 
 .map__controls {
   position: absolute;
   z-index: 10;
+}
+
+.map__progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,7 +1,7 @@
 import { DirectionsRenderer } from "@react-google-maps/api";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import RouteAlertBanner from "../elements/RouteAlertBanner.jsx";
+import AlertBanner from "../elements/AlertBanner.jsx";
 
 // Компонент маршрутов для работы с Google Directions Api
 
@@ -76,7 +76,7 @@ export default function MapDirections() {
   return (
     <>
       {error ? (
-        <RouteAlertBanner message={error.message} severity={error.severity} />
+        <AlertBanner message={error.message} severity={error.severity} />
       ) : (
         <></>
       )}

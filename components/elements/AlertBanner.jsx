@@ -2,7 +2,7 @@ import { Alert } from "@mui/material";
 
 // Компонент предупреждения об ошибке при постройке маршрута
 
-export default function RouteAlertBanner({ severity, message }) {
+export default function AlertBanner({ severity, message }) {
   return (
     <Alert
       severity={severity}

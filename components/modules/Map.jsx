@@ -4,6 +4,8 @@ import Markers from "./Markers.jsx";
 import MapInteractive from "./MapInteractive.jsx";
 import MapRoutes from "./MapRoutes.jsx";
 import TravelMode from "../elements/TravelMode.jsx";
+import AlertBanner from "../elements/AlertBanner.jsx";
+import Progress from "../elements/Progress.jsx";
 
 // Компонент карты Google Maps JS Api
 
@@ -13,23 +15,21 @@ function Map({ isLoaded, loadError, mapRef, ...props }) {
 
   // Заглушка на время загрузки карты
   if (loadError) {
-    return <h1>Error loading maps</h1>;
+    return <AlertBanner severity="error" message="Error loading maps!" />;
   }
   // Заглушка в случае ошибки при загрузке карты
   if (!isLoaded) {
-    return <h1>Loading maps</h1>;
+    return <Progress className="map__progress" />;
   }
 
   return (
     <div className="map" {...props}>
       <div className="map__inner">
-        
         {/* Переключение режимов построения маршрута */}
         <TravelMode />
 
         {/* Карта Google */}
         <MapInteractive mapRef={mapRef}>
-          
           {/* Маршруты */}
           <MapRoutes />
 

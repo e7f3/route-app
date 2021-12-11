@@ -8,8 +8,7 @@ export default function Markers({ setSelected }) {
   const dispatch = useDispatch();
 
   // Получение состояния из store
-  const placeIds = useSelector((state) => state.placesReducer.placeIds);
-  const places = useSelector((state) => state.placesReducer.places);
+  const { places, placeIds } = useSelector((state) => state.placesReducer);
 
   // При перетаскивании маркера
   const onDragEnd = (event, placeId) => {

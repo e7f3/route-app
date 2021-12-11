@@ -12,8 +12,7 @@ const polylineOptions = {
 
 export default function MapPolyline() {
   // Получение состояния из store
-  const placeIds = useSelector((state) => state.placesReducer.placeIds);
-  const places = useSelector((state) => state.placesReducer.places);
+  const { places, placeIds } = useSelector((state) => state.placesReducer);
 
   // Состояние для хранения маршрута
   const [path, setPath] = useState([]);

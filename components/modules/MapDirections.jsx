@@ -5,10 +5,11 @@ import RouteAlertBanner from "../elements/RouteAlertBanner.jsx";
 
 // Компонент маршрутов для работы с Google Directions Api
 
-export default function MapDirections({ travelMode }) {
+export default function MapDirections() {
   // Получение состояния из store
-  const placeIds = useSelector((state) => state.placesReducer.placeIds);
-  const places = useSelector((state) => state.placesReducer.places);
+  const {places, placeIds} = useSelector((state) => state.placesReducer);
+  const travelMode = useSelector((state) => state.routeReducer.travelMode);
+  
   // Состояние для хранения маршрутов
   const [directions, setDirections] = useState(null);
   // Состояние для ошибок

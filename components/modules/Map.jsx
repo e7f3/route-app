@@ -1,31 +1,15 @@
 import { useState } from "react";
 import MarkerInfo from "../elements/MarkerInfo.jsx";
 import Markers from "./Markers.jsx";
-import MapPolyline from "./MapPolyline.jsx";
 import MapInteractive from "./MapInteractive.jsx";
+import MapRoutes from "./MapRoutes.jsx";
+import TravelMode from "../elements/TravelMode.jsx";
 
 // Компонент карты Google Maps JS Api
-
-/* 
-  Раскоментировав часть кода, можно изменить функционал приложения, 
-  отображение реальных маршрутов вместо прямых линий на карте.
-  Режимы маршрутов : автомобиль, велосипед, пешеход, общественный транспорт
-*/
-
-/* Раскоментировать для изменения функционала */
-/*
-import MapDirections from "./MapDirections.jsx";
-import TravelMode from "../elements/TravelMode.jsx";
-*/
 
 function Map({ isLoaded, loadError, mapRef, ...props }) {
   // Состояние для хранения id выбранного маркера
   const [selected, setSelected] = useState(null);
-
-  /* Раскоментировать для изменения функционала */
-  /*
-  const [travelMode, setTravelMode] = useState("DRIVING");
-*/
 
   // Заглушка на время загрузки карты
   if (loadError) {
@@ -39,19 +23,19 @@ function Map({ isLoaded, loadError, mapRef, ...props }) {
   return (
     <div className="map" {...props}>
       <div className="map__inner">
-        {/* Раскоментировать для изменения функционала. Начало */}
-        {/*
-        <TravelMode travelMode={travelMode} setTravelMode={setTravelMode} />
-        */}
-        {/* Конец */}
+        
+        {/* Переключение режимов построения маршрута */}
+        <TravelMode />
+
+        {/* Карта Google */}
         <MapInteractive mapRef={mapRef}>
-          {/* Раскоментировать для изменения функционала. Начало */}
-          {/*
-          <MapDirections travelMode={travelMode}/>
-          */}
-          {/* Конец */}
+          
+          {/* Маршруты */}
+          <MapRoutes />
+
           {/* Кастомные маркеры на карте */}
           <Markers setSelected={setSelected} />
+
           {/* Окна с информацией о маркерах */}
           {selected && (
             <MarkerInfo
@@ -60,10 +44,6 @@ function Map({ isLoaded, loadError, mapRef, ...props }) {
               setSelected={setSelected}
             />
           )}
-          {/* Прямые линии маршрутов */}
-          {/* Закоментировать для изменения функционала. Начало. */}
-          <MapPolyline />
-          {/* Конец */}
         </MapInteractive>
       </div>
     </div>

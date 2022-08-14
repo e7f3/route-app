@@ -30,6 +30,8 @@ const usePlaces = () => {
     [placeIds]
   )
 
+
+  
   return onDragEnd
 }
 

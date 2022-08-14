@@ -1,5 +1,6 @@
 import styles from './Places.module.scss'
 
+import { useRef } from 'react'
 import { DragDropContext } from 'react-beautiful-dnd'
 import PlacesList from '../PlacesList/PlacesList.jsx'
 import SearchPlace from '../SearchPlace/SearchPlace'
@@ -9,7 +10,11 @@ import usePlaces from './usePlaces'
 // Компонент с поиском и списком точек
 
 export default function Places({ isLoaded, panTo }) {
-  const { onDragEnd, placesRef, togglePlaces } = usePlaces()
+  const onDragEnd = usePlaces()
+  const placesRef = useRef()
+  const togglePlaces = () => {
+    placesRef.current.classList.toggle(styles.shrink)
+  }
 
   return (
     <div className={styles.wrapper} ref={placesRef}>

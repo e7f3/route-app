@@ -44,7 +44,7 @@
       }
     }
     .togglePlaces {
-      transform: rotate(45deg);
+      //transform: rotate(45deg);
     }
     padding: 20px 20px 30px;
     animation: testtest 1s;
@@ -130,7 +130,7 @@
     bottom: -15px;
     left: 50%;
 
-    transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(-135deg);
 
     .checkbox:checked + .label {
       transform: rotate(180deg);

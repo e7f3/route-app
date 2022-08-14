@@ -1,6 +1,6 @@
 import styles from './SearchPlace.module.scss'
 
-import Input from '../../elements/Input.jsx'
+import Input from '../../elements/Input/Input.jsx'
 import {
   Autocomplete,
   Button,

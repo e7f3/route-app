@@ -5,7 +5,7 @@ import MarkerInfo from '../../elements/MarkerInfo/MarkerInfo.jsx'
 import Markers from '../Markers.jsx'
 import MapInteractive from '../MapInteractive.jsx'
 import MapRoutes from '../MapRoutes.jsx'
-import TravelMode from '../../elements/TravelMode.jsx'
+import TravelMode from '../../elements/TravelMode/TravelMode.jsx'
 import AlertBanner from '../../elements/AlertBanner.jsx'
 import Progress from '../../elements/Progress.jsx'
 

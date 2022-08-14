@@ -1,10 +1,9 @@
-import { useCallback, useRef } from 'react'
+import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setPlaceIdsAction } from '../../../store/placesReducer'
 
 const usePlaces = () => {
   const dispatch = useDispatch()
-  const placesRef = useRef()
 
   // Получение состояния из store
   const placeIds = useSelector((state) => state.placesReducer.placeIds)
@@ -31,11 +30,7 @@ const usePlaces = () => {
     [placeIds]
   )
 
-  const togglePlaces = () => {
-    placesRef.current.classList.toggle(styles.shrink)
-  }
-
-  return { onDragEnd, placesRef, togglePlaces }
+  return onDragEnd
 }
 
 export default usePlaces

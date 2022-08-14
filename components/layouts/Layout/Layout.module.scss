@@ -1,0 +1,11 @@
+.outer {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 var(--layout-indent);
+}
+
+.inner {
+  height: 100%;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}

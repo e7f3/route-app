@@ -3,7 +3,7 @@
 <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#fafcfe;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#3d3d3d;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <path class="st0" d="M13,7.9c0,4.3-5,8.1-5,8.1s-5-3.8-5-8.1C3,5.2,5.2,3,8,3S13,5.2,13,7.9z"/>
 <ellipse class="st0" cx="8" cy="7.9" rx="1" ry="1"/>

@@ -1,18 +1,22 @@
 // Создание и настройка темы Material UI
 
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 
 let theme = createTheme({
   palette: {
-    mode: "dark",
+    
+
+    neutral: {
+      main: '#3d3d3d',
+    },
   },
   typography: {
-    fontFamily: "Roboto",
+    fontFamily: 'Roboto',
   },
-});
+})
 
 // Responsive шрифты
 
-theme = responsiveFontSizes(theme);
+theme = responsiveFontSizes(theme)
 
-export default theme;
+export default theme

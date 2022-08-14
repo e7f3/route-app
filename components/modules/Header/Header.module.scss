@@ -1,0 +1,12 @@
+// Header стили
+
+.wrapper {
+  padding: 15px var(--layout-indent);
+  margin: 0 calc(-1 * var(--layout-indent));
+  box-shadow: 0px 10px 10px -10px #3d3d3d30;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+}

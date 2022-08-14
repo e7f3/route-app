@@ -1,0 +1,10 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.text {
+  font: var(--title-font--h2-small);
+}

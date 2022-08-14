@@ -1,7 +1,7 @@
-import Pannel from "../modules/Pannel.jsx";
+import Pannel from '../modules/Pannel/Pannel'
 
 // Компонент - контент страницы
 
 export default function Content() {
-  return <Pannel />;
+  return <Pannel />
 }

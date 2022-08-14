@@ -1,13 +1,5 @@
 // Общие стили
 
-.page__body {
-  background: $main-gradient;
-  color: $main-color--light;
-  font: $main-font;
-  height: 100%;
-  overflow: hidden
-}
-
 html,
 body,
 body > div:first-child,
@@ -15,10 +7,7 @@ div#__next,
 div#__next > div {
   height: 100%;
 }
-.main {
-  height: 100%;
-  margin-bottom: 187px;
-}
+
 .hidden {
   width: 1px;
   height: 1px;

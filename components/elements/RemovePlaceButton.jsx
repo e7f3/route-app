@@ -16,7 +16,7 @@ export default function RemovePlaceButton({ placeId }) {
       sx={{ display: "flex", alignItems: "center", marginRight: "10px" }}
       onClick={onClick}
     >
-      <ClearIcon />
+      <ClearIcon color='error'/>
     </Link>
   );
 }

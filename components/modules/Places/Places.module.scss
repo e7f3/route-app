@@ -1,0 +1,157 @@
+// Places стили
+
+.wrapper {
+  width: 33vw;
+  z-index: 2;
+  height: 100%;
+  padding: 40px 20px;
+  padding-left: 0;
+  max-height: 100%;
+  overflow: hidden;
+
+  box-shadow: 10px 0px 10px -10px #3d3d3d30;
+  transition: transform 0.2s ease-out 1s;
+
+  position: relative;
+
+  @media only screen and (max-width: 1080px) {
+    padding: 20px 20px 30px;
+    width: 100%;
+    box-shadow: 0px 10px 10px -10px #3d3d3d30;
+  }
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  transition: transform 0.2s ease-out;
+
+  @media only screen and (max-width: 1350px) {
+  }
+}
+
+.shrink {
+  @media only screen and (max-width: 1080px) {
+    .content {
+      transform: translateY(-100%);
+
+      & > *:not(*:last-child) {
+        visibility: hidden;
+      }
+    }
+    .togglePlaces {
+      transform: rotate(45deg);
+    }
+    padding: 20px 20px 30px;
+    animation: testtest 1s;
+
+    @keyframes testtest {
+      from {
+        height: auto;
+      }
+      to {
+        height: 40px;
+      }
+    }
+    height: 40px;
+  }
+
+  @media only screen and (min-width: 1081px) {
+    .content {
+      transform: translateX(-100%);
+
+      & > *:not(*:last-child) {
+        visibility: hidden;
+      }
+    }
+    .togglePlaces {
+      transform: translateX(100%) rotate(135deg);
+    }
+    animation: shrinkWidth 1s;
+
+    @keyframes shrinkWidth {
+      from {
+        width: auto;
+        padding-right: 20px;
+      }
+      to {
+        width: 40px;
+        padding-right: 10px;
+      }
+    }
+    padding-right: 10px;
+    width: 40px;
+  }
+}
+
+.DnDArea {
+  height: 100%;
+  max-height: 100%;
+}
+
+.mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.togglePlaces {
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  .checkbox:checked + .label {
+    transform: rotate(180deg);
+  }
+
+  @media only screen and (max-width: 1080px) {
+    top: unset;
+    right: unset;
+    bottom: -15px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(45deg);
+
+    .checkbox:checked + .label {
+      transform: rotate(180deg);
+    }
+  }
+
+  @media only screen and (min-width: 1081px) {
+    transform: translateY(-50%) rotate(135deg);
+  }
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-bottom: 2px solid #3d3d3d;
+  border-right: 2px solid #3d3d3d;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
